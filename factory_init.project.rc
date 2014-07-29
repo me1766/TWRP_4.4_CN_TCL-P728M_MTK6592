@@ -1,0 +1,11 @@
+on post-fs
+    
+service eemcs_fsd /system/bin/eemcs_fsd 0
+    user ccci
+    group  nvram ccci system
+    oneshot 
+
+service eemcs_mdinit /system/bin/eemcs_mdinit 0
+    user system
+    group nvram ccci system
+    oneshot

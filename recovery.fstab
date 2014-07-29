@@ -1,0 +1,11 @@
+#/misc		emmc	misc
+/boot		emmc	/dev/bootimg
+/recovery	emmc	/dev/recovery
+/cache		ext4	/dev/block/mmcblk0p7	flags=display="Cache";storage;wipeingui;backup=1
+/system	ext4	/dev/block/mmcblk0p6	flags=display="System";storage;wipeingui;backup=1
+/data		ext4	/dev/block/mmcblk0p8	
+/sdcard	vfat	/dev/block/mmcblk0p9
+/sdcard2	vfat	/dev/block/mmcblk1p1	/dev/block/mmcblk1
+#/sd-ext	auto	/dev/block/mmcblk1p2	/dev/block/mmcblk1	flags=display="SD-Ext";storage;wipeingui;backup=1;removable
+/usb-otg	vfat	/dev/block/sda1	/dev/block/sda	flags=display="Usb-otg";storage;wipeingui;removable
+/nvram		emmc	/dev/nvram		flags=display="Nvram(IMEI)";backup=1
